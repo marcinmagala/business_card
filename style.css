@@ -9,15 +9,6 @@ body {
   display: none;
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 200%;
-  filter: blur(4px);
-  cursor: pointer;
-  z-index: 5;
-}
-
 .desk {
   position: absolute;
   height: 90%;
@@ -54,9 +45,9 @@ body {
 }
 .photo img {
   padding: 5%;
-  width: 54%;
+  width: 60%;
   border-width: 2px;
-  border-radius: 17px;
+  border-radius: 25px;
   transition: 0.5s;
 }
 
@@ -76,9 +67,10 @@ body {
   /* width: 90%; */
   text-align: center;
   word-wrap: break-word;
+  overflow-y: auto;
 }
 .my_id p {
-  font-size: 120%;
+  font-size: 130%;
 }
 
 #projects {
@@ -181,6 +173,70 @@ body {
   border-radius: 5px;
 }
 
+.eduContent {
+  position: absolute;
+  background-color: #109431;
+  height: 20%;
+  width: 10%;
+  border-radius: 10px;
+  top: 69%;
+  left: 8%;
+  opacity: 0%;
+  transition: 1.3s;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.fontEdu {
+  font-size: 0.05vw !important;
+}
+
+.showEdu {
+  position: absolute;
+  background-color: #109431;
+  height: 88%;
+  width: 43%;
+  z-index: 1000;
+  top: 6%;
+  left: 53%;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 1.3s;
+}
+
+.eduContent .contentEducation p4 ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.eduContent .contentEducation p1 {
+  font-size: 2vw;
+  text-decoration: underline;
+}
+
+.eduContent .contentEducation p2 ul {
+  line-height: 1.3;
+}
+
+.eduContent .contentEducation p3 {
+  font-size: 2vw;
+  text-decoration: underline;
+}
+
+.eduContent .contentEducation p4 ul {
+  line-height: 1.4;
+}
+
+.closeWindow {
+  position: absolute;
+  height: 7%;
+  width: 7%;
+  top: 1%;
+  left: 96%;
+  cursor: pointer;
+}
+
 .experience {
   background-color: rgb(42, 7, 97);
   grid-area: experience;
@@ -210,12 +266,68 @@ body {
   text-align: center;
   font-size: 1.6vw;
   border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.expContent {
+  position: absolute;
+  background-color: #0c73b8;
+  height: 20%;
+  width: 10%;
+  border-radius: 10px;
+  top: 69%;
+  left: 31%;
+  opacity: 0%;
+  transition: 1.2s;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.showExp {
+  position: absolute;
+  background-color: #0c73b8;
+  height: 88%;
+  width: 43%;
+  z-index: 1000;
+  top: 6%;
+  left: 53%;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.contentExperience {
+  margin-right: 5%;
+  margin-top: 1%;
+}
+
+.expContent .contentExperience p1 {
+  font-size: 1.4vw;
+  text-decoration: underline;
+}
+
+.expContent .contentExperience p2 ul {
+  line-height: 1.3;
+}
+
+.expContent .contentExperience p3 {
+  font-size: 1.4vw;
+  text-decoration: underline;
+}
+
+.expContent .contentExperience p4 ul {
+  line-height: 1.3;
 }
 
 #contact {
   left: 52%;
   top: 52%;
   display: flex;
+}
+
+ion-icon {
+  pointer-events: none;
 }
 
 .name_con {
@@ -237,6 +349,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .place:hover {
@@ -244,10 +357,120 @@ body {
   box-shadow: 0 0 1em #109431;
 }
 
+#mail:hover {
+  background-color: rgb(20, 94, 231);
+  box-shadow: 0 0 0.17em #109431;
+}
+
+.placeContentMail {
+  position: absolute;
+  background-color: #0c57b8;
+  height: 10%;
+  width: 5%;
+  top: 66%;
+  left: 55%;
+  /* height: 4%;
+  width: 13%;
+  top: 54.5%;
+  left: 68%; */
+  border-radius: 10px;
+  opacity: 0%;
+  transition: 1s;
+  z-index: 0;
+}
+
+.placeContentMail a {
+  text-decoration: none;
+  color: black;
+}
+
+.placeContentPhone {
+  position: absolute;
+  background-color: #0c57b8;
+  height: 10%;
+  width: 5%;
+  top: 80%;
+  left: 66%;
+  /* height: 4%;
+  width: 13%;
+  top: 54.5%;
+  left: 68%; */
+  border-radius: 10px;
+  opacity: 0%;
+  transition: 1s;
+  z-index: 0;
+}
+
+.placeContentPhone a {
+  text-decoration: none;
+  color: black;
+}
+
+.showPlacePhone {
+  position: absolute;
+  background-color: #0c57b8;
+  height: 5%;
+  width: 10vw;
+  z-index: 1000;
+  top: 70%;
+  left: 63.5%;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.showPlacePhone a {
+  position: absolute;
+  text-decoration: none;
+  top: 5%;
+  left: 0.75vw;
+  color: black;
+  font-size: 1.9vw;
+}
+
+.showPlaceMail {
+  position: absolute;
+  background-color: #0c57b8;
+  height: 5%;
+  width: 20%;
+  z-index: 1000;
+  top: 55%;
+  left: 49%;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.showPlaceMail a {
+  position: absolute;
+  text-decoration: none;
+  top: 20%;
+  left: 2vw;
+  color: black;
+  font-size: 1.3vw;
+}
+
+.iconMail {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.iconMail span {
+  color: white;
+  font-size: 6vw;
+}
+
+.textMyMail {
+  position: absolute;
+  font-size: 2vw;
+}
+
 #mail {
   position: absolute;
   top: 23%;
   left: 5%;
+  font-size: 6vw;
 }
 
 #mail span {
@@ -308,9 +531,9 @@ body {
   /* .my_id p {
     font-size: 70%;
   } */
-  .my_id p {
+  /* .my_id p {
     font-size: 2vh;
-  }
+  } */
   .education span {
     margin-top: 45%;
     font-size: 350%;
